@@ -1,0 +1,15 @@
+components:
+  - name: runner
+    type: webservice
+    properties:
+      image: napptive/github-runner:2.301.1
+      cpu: "1"
+      memory: "2G"
+      env:
+        # Name of the GitHub organization or repository as org/repo
+        - name: ORGANIZATION
+          value: __ORGANIZATION__
+        # Configure the runner token as provided in
+        # https://docs.github.com/en/actions/hosting-your-own-runners/adding-self-hosted-runners#adding-a-self-hosted-runner-to-a-repository
+        - name: TOKEN
+          value: __TOKEN__
